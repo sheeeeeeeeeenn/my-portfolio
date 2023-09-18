@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Contact Me</title>
+    <link rel="icon" type="img/gif" sizes="16x16" href="img/Omni.gif">
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="index.html">SHENMAR BONIFACIO</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                    <li><a href="index.html" class="active"><i class='bx bx-home'></i>Home</a></li>
+                    <li><a href="About.html" class="active"><i class='bx bx-user'></i>About</a></li>
+                    <li><a href="skills.html" class="active"><i class='bx bx-code'></i>Skills</a></li>
+                    <li><a href="Portfolio.html" class="active"><i class='bx bx-collection'></i>Portfolio</a></li>
+                    <li><a href="Contact.html" class="active"><i class='bx bx-mail-send'></i>Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+    <section id="contact">
+        <div class="row first-section">
+            <div class="col-lg-6 col-md-6">
+                <img
+            class="Profilepic"
+                src="img/Shen.png"
+                 alt=""
+                id="profile-pic"
+                    onmouseenter="changeImage(true)"
+                    onmouseleave="changeImage(false)"
+>
+            </div>
+            <div class="col-lg-6 col-md-6 context">
+                
+                <div class="social" style="display: flex; justify-content: center;">
+                    <a href="https://www.linkedin.com/in/shenmar-bonifacio-10660b1ba?fbclid=IwAR0p3CKqIZ6nCsRQ0QeawcLcCwRUbj6roiP4tPcOh7wdEVWY5536NjXp3a8"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/potatooosmashhh/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/sheeeeeeeeeenn"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.facebook.com/Sheeeeeeeeeenn"><i class='bx bxl-facebook-circle'></i></a>
+                </div>
+                <br>
+                <p>I hope you like my simple Website<br>
+                    My Inbox is always open for all.</p>
+                <p>Follow me for more!</p>
+                    <br>
+
+                    <a href="SHENMAR_CV_20230907_193637_0000.pdf" target=_blank>
+                    <button type="button" class="btn btn-primary btn-lg Resume">See my Resume</button></a>
+             </div>
+        </div>
+        </section>
+        <section>
+            <div class="second-section">
+                <h1 class="connect">
+                    <i class='bx bx-envelope'></i> Email: shenmarbonifacio@gmail.com
+                    <br>
+                    <i class='bx bx-phone'></i> Contact: 09764129222
+                    <br>
+                    <i class='bx bx-home'></i> Address: Bagumbong, Caloocan City
+                </h1>
+                
+            </div>
+        </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+    <script>
+        const profilePic = document.getElementById('profile-pic');
+      
+        function changeImage(isHover) {
+          if (isHover) {
+            profilePic.src = 'img/ben1.gif'; 
+          } else {
+            profilePic.src = 'img/Shen.png'; 
+          }
+        }
+      </script>
+      
+
+    
+    <style>
+    
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+    
+        .footer-gif {
+            width: 200px; 
+            height: auto;
+        }
+        .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180, 1fr));
+ }  
+        .icon-bar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .icon-bar a {
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .icon-bar a:hover {
+            background-color: #555;
+        }
+
+    </style>
+</body>
+<footer>
+    <p>
+    © SHENMAR BONIFACIO, From BSCS 3C. All Rights Reserved.
+    </p>
+</footer>
+
+</html>

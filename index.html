@@ -1,0 +1,113 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="intro.css">
+        <title>My Resume</title>
+        <link rel="icon" type="img/gif" sizes="16x16" href="img/Omni.gif">
+    </head>
+    <style>
+        .icon-bar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .icon-bar a {
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .icon-bar a:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <body>
+        <header class="container">
+            <div class="page-header">
+                <div class="logo">
+                    <a href="index.html">SHENMAR BONIFACIO</a>
+                </div>
+                <input type="checkbox" id="click">
+
+                <label for="click" class="mainicon">
+                    <div class="menu">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                </label>
+                <ul>
+                    <li><a href="index.html" class="active"><i class='bx bx-home'></i>Home</a></li>
+                    <li><a href="About.html" class="active"><i class='bx bx-user'></i>About</a></li>
+                    <li><a href="skills.html" class="active"><i class='bx bx-code'></i>Skills</a></li>
+                    <li><a href="Portfolio.html" class="active"><i class='bx bx-collection'></i>Portfolio</a></li>
+                    <li><a href="Contact.html" class="active"><i class='bx bx-mail-send'></i>Contact</a></li>
+                </ul>
+                <label class="mode">    
+                    <input type="checkbox" id="darkModeToggle">
+                    <i class='bx bxs-moon'></i>
+                </label>
+            </div>
+        </header>
+
+
+        <section class="container">
+            <div class="main">
+                <div class="detail">
+                    <h1>Hi,</h1>
+                    <h2>It's me</h2>
+                    <h1><span style="color:#f9532d;">SHENMAR BONIFACIO </span></h1>
+                    <h3>From </h3>
+                    <h1><span style="color:#f9532d;">BSCS 3C </span></h1>
+                    <p>I'm currently a Computer Science Student. 
+                    </p>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/shenmar-bonifacio-10660b1ba?fbclid=IwAR0p3CKqIZ6nCsRQ0QeawcLcCwRUbj6roiP4tPcOh7wdEVWY5536NjXp3a8"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://www.instagram.com/potatooosmashhh/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://github.com/sheeeeeeeeeenn"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.facebook.com/Sheeeeeeeeeenn"><i class='bx bxl-facebook-circle'></i></a>
+                    </div>
+                </div>
+                <div class="img-sec">
+                    <div class="images">
+                        <img src="img/ben10.png" alt="" class="img-w">
+
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <script>
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+            const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+            if (isDarkMode) {
+                body.classList.add('dark-mode');
+                darkModeToggle.checked = true;
+            }
+            darkModeToggle.addEventListener('change', () => {
+                if (darkModeToggle.checked) {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            });
+        </script>
+        <footer>
+            <p>
+            © SHENMAR BONIFACIO, From BSCS 3C. All Rights Reserved.
+            </p>
+        </footer>
+    </body>
+
+    </html>
